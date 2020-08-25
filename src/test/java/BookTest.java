@@ -16,4 +16,14 @@ public class BookTest {
         assertEquals("Gone Girl", book.getTitle());
     }
 
+    @Test
+    public void bookHasAuthor() {
+        assertEquals("Gillian Flynn", book.getAuthor());
+    }
+
+    @Test
+    public void bookHasGenre() {
+        assertEquals("detective story", book.getGenre());
+    }
+
 }
