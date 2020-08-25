@@ -11,12 +11,15 @@ public class Library {
         this.books = new ArrayList<Book>();
     }
 
-
     public int getBooks() {
         return this.books.size();
     }
 
     public void addBook(Book book) {
-        this.books.add(book);
+        if(this.getBooks() < this.capacity ) {
+            this.books.add(book);
+        }
     }
+
+
 }
