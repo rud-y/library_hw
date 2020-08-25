@@ -7,11 +7,13 @@ public class LibraryTest {
 
     private Library library;
     private Book book;
+    private Book book2;
 
     @Before
     public void before() {
         library = new Library(500);
         book = new Book("Gone Girl", "Gillian Flynn", "detective story" );
+        book2 = new Book("Then there were none","Agatha Christie", "detective story");
     }
 
     @Test
@@ -33,6 +35,14 @@ public class LibraryTest {
         }
         library.addBook(book);
         assertEquals(500, library.getBooks());
+    }
+
+    @Test
+    public void canLendBook() {
+        library.addBook(book);
+        library.addBook(book2);
+        library.lendBook(book);
+        assertEquals(1, library.getBooks());
     }
 
 }

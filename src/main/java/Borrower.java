@@ -11,4 +11,10 @@ public class Borrower {
     public int getBorrowedBooks() {
         return this.borrowedBooks.size();
     }
+
+    public void borrowBook(Library library, Book book) {
+        this.borrowedBooks.add(library.lendBook(book));
+
+    }
+
 }

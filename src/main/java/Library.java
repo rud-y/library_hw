@@ -21,5 +21,10 @@ public class Library {
         }
     }
 
+    public Book lendBook(Book book) {
+        this.books.remove(book);
+        return book;
+    }
+
 
 }
