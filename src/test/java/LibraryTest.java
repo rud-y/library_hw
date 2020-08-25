@@ -10,13 +10,20 @@ public class LibraryTest {
 
     @Before
     public void before() {
-        library = new Library(990);
+        library = new Library(500);
         book = new Book("Gone Girl", "Gillian Flynn", "detective story" );
     }
 
     @Test
     public void libraryStartsWithNoBooks() {
         assertEquals(0, library.getBooks());
+    }
+
+    @Test
+    public void canAddBookToLibraryStock() {
+        library.addBook(book);
+        library.addBook(book);
+        assertEquals(2, library.getBooks());
     }
 
 }
